@@ -1,0 +1,208 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+  overflow-x: hidden;
+}
+
+.navbar{
+    height:40px;
+    background-color: lightgrey;
+    padding-top: 1.6%;
+      }
+      .user li a{
+        font-size:15px;
+      }
+    .form-select{
+        font-size: 12px;          
+    }
+    .text-orange {
+        color: orange;
+    }
+    .searchBtn{
+        background-color: orange;
+        border-radius:0 10px 10px 0;
+        padding: 0.5%;
+        }
+    .form-control {
+        border-radius:10px 0 0 10px ;
+       }
+      .headeralt{
+        background-color: white;
+        font-size: medium;
+      }
+      .cardButton {
+        background-color: rgb(161, 152, 152)
+      }
+      .footer{
+        background-color: rgba(240, 237, 237, 0.973)
+      }
+      .footeryazi{
+        line-height: 1.5;
+        font-size: smaller;
+      }
+      ul li a{
+      text-decoration: none ;
+      font-size: small;
+      color:black;
+      }
+                 
+.footer-bottom{
+  background-color: rgb(196, 186, 186);
+  height: 4%;
+  width: 100%;
+  padding-left:7% !important;
+  padding-right:7% !important;
+ 
+}
+.footerP{
+  font-size: 12px;
+}
+  .chevron-up{
+    background-color: orange;
+    padding:1rem;
+    margin-right: 0;
+  }    
+ 
+  /* contact.html başlangıç */
+
+  .submitBtn{
+    background-color: orange;
+    float:right;
+      }
+  
+      /* login */
+      .loginBtn{
+        background-color: orange;
+      }
+      .signupBtn{
+        background-color: orange;
+      }
+       .or{
+        background-color: orange;
+        color:white;
+     }
+    
+.contact-input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.message-box {
+  width: 100%;
+  height: 100px;
+}
+
+.button {
+  text-align: right;
+}
+
+.btn {
+  background-color: #FFA500;
+  color: white;
+}
+
+.text-orange {
+  color: #FFA500;
+}
+
+.fa-brands {
+  color: black;
+}
+
+.login::placeholder {
+  padding:1%;
+  box-sizing: border-box;
+}
+.login{
+  background-color: rgb(235, 232, 232);
+}
+/* cart html*********** */
+/* .cart{
+  background-color: orange;
+} */
+
+.bg-orange{
+  background-color: orange;
+}
+.bg-grey{
+  background-color: rgb(211, 211, 211);
+}
+/* carousal */
+.prevBtn{
+margin-left:0;
+padding-left:0;
+}
+
+.leftside{
+  padding-left: 5rem;
+}
+.yukaricik{
+  display:none;
+  height:80px;
+  width:80px;
+  border-radius:50px;
+  color: white;
+  font-size: 30px;
+  line-height: 80px;
+  text-align: center;
+  position:fixed;
+  bottom:15px;
+  right: 15px;
+  z-index: 99;
+  }
+  .yukaricik.goster{
+    display:block;
+  }
+  .yukaricik.kaybol{
+    display:none;
+  }
+  .yukaricik:hover{
+    cursor:pointer;
+    background-color: orangered;
+  }
+
+  /*********** SEPET İŞLEMLERİ*********** */
+  .shopping-box{
+    position: relative;
+    top:-25px;
+   }
+         
+  
+  /* ************************************* */
+/* 
+  @media screen and (min-width:200px) and (max-width:722px) {
+    
+.sepet{
+  margin-top: 1.5rem;
+}
+    } */
+
+
+  @media screen and (max-width:546px) {
+    .service h5 {
+        font-size: 14px !important;
+    }
+
+    .service ul li a {
+        font-size: 12px !important;
+    }
+    
+}
+
+@media screen and (max-width:453px) {
+    .footer-bottom p {
+        font-size: 12px;
+        margin: auto;
+    }
+}
+
+/* **************** */
+
+/* .card .Btn{
+  position:absolute;
+  right: 20px;
+  bottom:20px;
+} */

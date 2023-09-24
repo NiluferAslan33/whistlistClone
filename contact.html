@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alışveriş Sitesi</title>
+     <!-- Fontsawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">    <link rel="stylesheet" href="style.css">
+ <!-- external css -->
+ <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+
+  <!-- HEADER ÜST -->
+
+  <header class="container-fluid">
+        <div class="row bg-grey py-2">
+        <div class="col-12 header-top d-flex justify-content-between px-5">
+            <div class="header-contact d-none d-sm-inline-block">
+                <a href="#" class="text-black d-inline-block me-5 text-decoration-none fs-6">
+                    <i class="fa-solid fa-phone"></i>
+                    +2 95 01 88 281
+                </a>
+                <a href="#" class="text-black text-decoration-none fs-6">
+                    <i class="fa-solid fa-envelope"></i>
+                    info@domain.com
+                </a>
+            </div>
+            <div class="header-social-media">
+                <i class="fa-brands fa-facebook-f me-4"></i>
+                <i class="fa-brands fa-twitter me-4"></i>
+                <i class="fa-brands fa-linkedin-in me-4"></i>
+                <i class="fa-brands fa-glide-g"></i>
+            </div>
+        </div>
+    </div>
+<!-- HEADER ORTA -->
+<div class="row border-bottom px-5 py-3 headerM">
+  <div class="col-12 header-center d-flex justify-content-between">
+      <div class="logo-section">
+          <a href="index.html">
+              <img src="logo.PNG" class="me-3" alt="logo">
+          </a>
+          <select class="me-3 d-none d-lg-inline-block" name="" id="">
+              <option value="">USA</option>
+          </select>
+          <select class="me-3 d-none d-lg-inline-block" name="" id="">
+              <option value="">DOLLAR</option>
+          </select>
+      </div>
+
+      <div class="user-section d-flex align-items-center">
+          <ul class="d-flex m-0 list-unstyled fw-medium">
+              <li>
+                  <a href="#" class="text-black me-3 fs-6">
+                      <i class="fa-solid fa-user"></i>
+                      User
+                  </a>
+              </li>
+              <li>
+                  <a href="whistlist.html" class="text-black me-3 d-none d-sm-block fs-6">
+                      <i class="fa-solid fa-star"></i>
+                      Whistlist
+                  </a>
+              </li>
+              <li>
+                  <a href="#" class="text-black me-3 d-none d-sm-block fs-6">
+                      <i class="fa-solid fa-bullseye"></i>
+                      Checkout
+                  </a>
+              </li>
+
+              <li><a href="cart.html" class="text-black d-sm-block me-0 fw-medium fs-6 ">Cart</a></li>
+
+                                 <!-- *********SEPET********** -->
+
+              <li><button type="button" class="btn mt-0" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <div class="shopping-box mt-0 pt-0 me-4 align-items-lg-start">
+                  <div class="little-box">0</div>
+                 <i class="fa-solid fa-cart-shopping" style="color: #010813;"></i>          
+                </div>
+                </button>
+            </li>
+
+                                      <!-- MODAL Lİ CART YAPISI -->
+                                      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Sepetinizdeki Ürünler</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row border border-bottom py-3 adet product">
+                                                    <div class="col-5 d-flex productWrapper">
+                                                        <img class=${resim.image} alt="...">
+                                                        <div class="info ps-5 pt-4">
+                                                            <h5>${resim.title}</h5>
+                                                        
+                                                        </div>
+                                                    </div>  
+                                                    <div id="product5" class="col-2">
+                                                        <h5 class="pt-4 price">${resim.price}$</h5>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <div class="quantity pt-4">
+                                                            <button class="w-25 arttir" onclick="increaseValue(5)">+</button>
+                                                            <p id="value5" class="d-inline-block border border-1 w-25 text-center">1</p>
+                                                            <button class="w-25 azalt" onclick="decreaseValue(5)">-</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="total pt-4 text-center">
+                                                            <!-- <h5 id="subtotal5" class="d-inline-block subtotal">${resim.price*value}$</h5> -->
+                                                            <i onclick="removeProduct(5)" class="fa-solid fa-square-xmark float-end fs-2 me-0 color-grey"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div> 
+
+                                    <!-- **********************SEPET BİTİŞ*********** -->
+
+              <li>
+                  <a href="login.html" class="text-black me-3 fs-6">
+                      <i class="fa-solid fa-lock"></i>
+                      Login
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+
+  <!-- Header Alt -->
+  <nav class="navbar navbar-expand-lg headeralt">
+    <div class="container-fluid px-5">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-orange" aria-current="page" href="index.html">Home</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Shop
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Blog
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">404</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="contact.html">Contact</a>
+          </li>
+          
+        </ul>
+        <div class="input-group w-25">
+          <input id="inpt" type="text" class="form-control shadow-none " placeholder="Search"
+              aria-label="Recipient's username" aria-describedby="button-addon2">
+          <button id="searchBtn" class="btn btn-outline-none bg-orange" type="button" id="button-addon2">
+              <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+      </div>
+      </div>
+      
+    </div>
+  </nav>
+ 
+   
+<!-- ************************ -->
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-12 col-md-8">
+      <!-- GET IN TOUCH -->
+      <h5 class="text-orange text-center mb-4">GET IN TOUCH</h5>
+      <form class="text-center">
+        <div class="row">
+          <div class="col-md-6">
+            <input class="contact-input me-2 p-2 rounded-1" type="text" placeholder="Name">
+          </div>
+          <div class="col-md-6">
+            <input class="contact-input p-2 rounded-1" type="text" placeholder="Email">
+          </div>
+        </div>
+        <input class="mt-3 p-2 w-100 rounded-1" type="text" placeholder="Subject">
+        <textarea class="message-box mt-3 p-2 rounded-1 w-100" placeholder="Your message here"></textarea>
+      </form>
+      <div class="button w-100 m-auto d-flex justify-content-end">
+        <button class="btn bg-orange text-white mt-4 rounded-0">Submit</button>
+      </div>
+    </div>
+
+    <!-- CONTACT INFO -->
+    <div class="col-12 col-md-4 mt-1 text-center text-md-start flex-lg-shrink-1 ">
+      <h5 class="text-orange text-center mb-4">CONTACT INFO</h5>
+      <p>E-shopper Inc.</p>
+      <p>935 W.Webster Ave New Streets Chicago,IL 60614. NY</p>
+      <p>Newyork USA</p>
+      <p>Mobile: +2346 17 83 93</p>
+      <p>Fax: 1-714-252-0026</p>
+      <p>Email: info@e-shopper.com </p>
+      <h5 class="text-center my-4">SOCIAL NETWORKING</h5>
+      <div class="contact-social-media text-center">
+        <i class="fa-brands fa-facebook-f me-4 fs-3"></i>
+        <i class="fa-brands fa-twitter me-4 fs-3"></i>
+        <i class="fa-brands fa-youtube me-4 fs-3"></i>
+        <i class="fa-brands fa-glide-g fs-3"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+
+        <!-- footer üst kısım -->
+
+        <div class="container-fluid mt-5 pt-4 px-0 footer">
+          <div class="container">
+            <div class="row">
+            <div class="col-6 col-sm-3">
+                    <h3 class="mt-3 fs-5"><span class="text-orange">E</span>-SHOPPER</h3>
+                    <p class="footeryazi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut alias quos est omnis iure accusantium.</p>
+                    </div>
+                    <div class="col-6 col-sm-9">
+                    <img class="d-none d-xl-inline-block" src= "footer-photo1.png" class= "card-img-top"  alt="...">
+                    <img  class="d-none d-sm-inline-block" src= "/footer-photo2.png" class= "card-img-top" alt="...">
+                    <img class="d-none d-sm-inline-block" src= "footer-photo3.png" class= "card-img-top" alt="...">
+                    <img class="d-none d-sm-inline-block" src= "footer-photo4.png" class= "card-img-top" alt="...">
+                    <img class="d-none d-sm-inline-block ms-5" src= "/footer-photo5.png" class= "card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <hr class="m-0 p-0">    
+
+            <!-- SERVİCE           -->
+
+         <div class="container-fluid container-md mb-5">
+          <div class="row mt-3">
+              <div class="col-12 col-lg-8 col-md-12 col-sm-12 mt-3 d-flex justify-content-between">
+                  <div class="service">
+                      <h5 class="fs-5">SERVICE</h5>
+                      <ul class="m-0 p-0 list-unstyled">
+                          <li>
+                              <a class="fs-8" href="#">Online Help</a>
+                          </li>
+                          <li>
+                              <a class="fs-8" href="#">Contact Us</a>
+                          </li>
+                          <li>
+                              <a class="fs-8" href="#">Order Status</a>
+                          </li>
+                          <li>
+                              <a class="fs-8" href="#">Change Location</a>
+                          </li>
+                          <li>
+                              <a class="fs-8" href="#">FAQ's</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="service">
+                      <h5 class="fs-5">QUOCK SHOP</h5>
+                      <ul class="m-0 p-0 list-unstyled">
+                          <li>
+                              <a class="fs-8" href="#">Online Help</a>
+                          </li>
+                          <li>
+                              <a class="fs-8" href="#">Contact Us</a>
+                          </li>
+                          <li>
+                              <a class="fs-8" href="#">Order Status</a>
+                          </li>
+                          <li>
+                              <a class="fs-8" href="#">Change Location</a>
+                          </li>
+                          <li>
+                              <a class="fs-8" href="#">FAQ's</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="service">
+                      <h5 class="fs-5">POLICIES</h5>
+                      <ul class="m-0 p-0 list-unstyled">
+                          <li>
+                              <a class="fs-8" href="#">Online Help</a>
+                          </li>
+                          <li>
+                              <a class="fs-8" href="#">Contact Us</a>
+                          </li>
+                          <li>
+                              <a class="fs-8" href="#">Order Status</a>
+                          </li>
+                          <li>
+                              <a class="fs-8" href="#">Change Location</a>
+                          </li>
+                          <li>
+                              <a class="fs-8" href="#">FAQ's</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="service">
+                      <h5 class="fs-5">ABOUT SHOPPER</h5>
+                      <ul class="m-0 p-0 list-unstyled">
+                          <li>
+                              <a class="fs-8" href="#">Online Help</a>
+                          </li>
+                          <li>
+                              <a class="fs-8" href="#">Contact Us</a>
+                          </li>
+                          <li>
+                              <a class="fs-8" href="#">Order Status</a>
+                          </li>
+                          <li>
+                              <a class="fs-8" href="#">Change Location</a>
+                          </li>
+                          <li>
+                              <a class="fs-8" href="#">FAQ's</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+
+              <div class="service col-12 col-lg-4 col-md-12 col-sm-12 mt-3">
+                  <h5 class="fs-5 text-center w-100">ABOUT SHOPPER</h5>
+                  <div class="right-section d-flex flex-column align-items-end">
+                      <div class="input-group mb-3 w-75">
+                        <input type="text" class="form-control shadow-none" placeholder="Your email adress" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-dark text-bg-warning" type="button" id="button-addon2"><i class="fa-solid fa-circle-right text-white" style="color: #d78109;"></i></button>
+                        </div>
+                      <p class="fs-7 w-75 footerP">Get the most recent updates from our site and be updated your self... </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+           <!-- FOOTER ALT -->
+
+ <div class="contaniner">
+<div class="footer-bottom col-12 justify-content-between mt-0 border1 p-0 m-0 d-flex col-sm-8 ">
+  <div class="d-none d-sm-inline-block me-5">
+    <p class="ms-5">Copyright © 2013 E-SHOPPER Inc. All rights reserved</p>
+  </div>
+      <div class="d-flex">
+    <p class="d-none d-sm-inline-block me-4 ">Designed by <span> <ins
+     class="text-orange me-3">Themeum</ins> </span></p>
+      <div class="bg-orange chevron-up text-center me-5">
+           <i class="fa-solid fa-chevron-up"></i>
+      </div>
+  </div>
+</div>
+</div>
+
+</div>
+
+<div>
+  <a class="yukaricik">
+      <i class="fa-solid fa-circle-up" style="color: #010a18;"></i>
+  </a>
+</div>
+
+ <!-- Bootsrap JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<!-- External JS -->
+<script src="script.js" ></script>
+
+</body>
+</html>
