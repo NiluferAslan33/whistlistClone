@@ -120,10 +120,6 @@ body{
   background-color: rgb(235, 232, 232);
 }
 /* cart html*********** */
-/* .cart{
-  background-color: orange;
-} */
-
 .bg-orange{
   background-color: orange;
 }
@@ -172,13 +168,6 @@ padding-left:0;
          
   
   /* ************************************* */
-/* 
-  @media screen and (min-width:200px) and (max-width:722px) {
-    
-.sepet{
-  margin-top: 1.5rem;
-}
-    } */
 
 
   @media screen and (max-width:546px) {
@@ -199,10 +188,3 @@ padding-left:0;
     }
 }
 
-/* **************** */
-
-/* .card .Btn{
-  position:absolute;
-  right: 20px;
-  bottom:20px;
-} */
