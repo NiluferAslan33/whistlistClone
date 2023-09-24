@@ -1,2 +1,2 @@
-# whistlistClone
-shooping on web
+# whislistClone
+shopping on web
